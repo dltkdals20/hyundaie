@@ -558,10 +558,42 @@
     transform: translateX(-500px);
     border: 1px solid var(--gc);
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.15);
+    padding: 60px 50px;
+    text-align: left;
 }
 
-.main_solution .solusion_slider img {
+.main_solution .solution_con::after {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: -30px;
+    width: 60px;
+    height: 2px;
+    background: var(--mc);
+}
+
+.main_solution .solution_con h3 {
+    font-size: 23px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+
+
+
+.main_solution .solution_con p {
+    font-size: 15px;
+    min-height: 200px;
+    line-height: 1.45;
+    word-break: keep-all;
+}
+
+.main_solution .solusion_slider figure img {
     margin: 0 auto;
+    filter: grayscale(1) brightness(1.5);
+}
+
+.main_solution .solusion_slider figure.slick-center img {
+    filter: grayscale(0) brightness(1);
 }
 
 .main_solution .solusion_slider .slick-dots {
@@ -590,11 +622,11 @@
 }
 
 
-.main_solution .solution_con .box {
+.main_solution .solution_con .con {
     display: none;
 }
 
-.main_solution .solution_con .box.on {
+.main_solution .solution_con .con.on {
     display: block;
 }
 
@@ -602,6 +634,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translateX(-50%);
     width: 100px;
     height: 50px;
     background: rgb(0, 0, 0, 0.3);
@@ -609,7 +642,7 @@
 }
 
 .main_solution .arrows .left {
-    margin: 0 0 0 -650px;
+    margin: 0 0 0 -600px;
 }
 
 .main_solution .arrows .left::before {
@@ -632,4 +665,52 @@
     border-top: 1px solid var(--wc);
     transform: rotate(-45deg);
     transform-origin: left bottom;
+}
+
+.main_solution .arrows .right {
+    margin: 0 0 0 600px;
+}
+
+.main_solution .arrows .right::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    height: 0;
+    border-top: 1px solid var(--wc);
+}
+
+.main_solution .arrows .right::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 20px;
+    height: 0 px;
+    border-top: 1px solid var(--wc);
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+}
+
+
+.to_top {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    font-size: 30px;
+    color: var(--wc);
+    background: var(--mc);
+    padding: 10px 6px;
+}
+
+.to_top::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    right: 0;
+    background: var(--mc);
+    height: 2px;
 }
